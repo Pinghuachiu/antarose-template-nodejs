@@ -14,34 +14,50 @@ This template provides a solid foundation for building modern web applications w
 
 ## Quick Start
 
-### Using Bootstrap Script (Recommended)
+### Using Bootstrap Script (Recommended) 🚀
 
-Download and run the bootstrap script to create a new project:
+Create a new project from this template with a single command:
 
 ```bash
-# Download the bootstrap script
+# Method 1: Download and run locally
 curl -O https://raw.githubusercontent.com/Pinghuachiu/antarose-template-nodejs/main/anta-node.sh
 chmod +x anta-node.sh
-
-# Create your new project
 ./anta-node.sh my-awesome-project
 
-# Follow the interactive prompts:
-# - Project description
-# - Author name (default: Antarose)
-# - Author email (default: jackalchiu@antarose.com)
-# - Git remote setup (optional)
-# - Install dependencies (recommended)
+# Method 2: Direct execution (one-liner)
+curl -fsSL https://raw.githubusercontent.com/Pinghuachiu/antarose-template-nodejs/main/anta-node.sh | bash -s my-awesome-project
 ```
 
-The script will automatically:
-- ✅ Download the template
-- ✅ Remove template git history
-- ✅ Clean up unnecessary files (docs/specs)
-- ✅ Configure project information
-- ✅ Initialize new git repository
-- ✅ Install dependencies
-- ✅ Create initial commit
+**Interactive Configuration:**
+
+The script will guide you through setup with these prompts:
+
+| Prompt | Default Value | Required |
+|--------|--------------|----------|
+| Project description | "A Node.js project built with Antarose Template" | No |
+| Author | jackalchiu@antarose.com | No |
+| GitHub repository URL | (skip) | No |
+| Install dependencies? | Yes | No |
+
+**What the script does automatically:**
+
+- ✅ **Validates environment** (Git, Node.js, npm installed)
+- ✅ **Clones template** from this repository
+- ✅ **Validates project name** (npm package naming rules)
+- ✅ **Removes template Git history** (.git/ directory)
+- ✅ **Cleans up files** (removes docs/specs/, keeps docs/architecture/)
+- ✅ **Updates configuration**:
+  - `frontend/package.json` - name, description, author, version
+  - `backend/package.json` - name, description, author, version
+  - `README.md` - project name
+- ✅ **Installs dependencies** (frontend + backend)
+- ✅ **Initializes new Git repository** with initial commit
+- ✅ **Sets up Git remote** (if provided)
+
+**Requirements:**
+- ✅ Project name must be lowercase (a-z, 0-9, -, _)
+- ✅ Max 214 characters
+- ✅ Cannot start with `.` or `_`
 
 ### Manual Setup
 

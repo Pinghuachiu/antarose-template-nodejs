@@ -7,11 +7,43 @@ A production-ready full-stack template featuring Express + TypeScript backend an
 This template provides a solid foundation for building modern web applications with:
 
 - **Backend**: Express 5 + TypeScript API server
-- **Frontend**: Next.js 15 + React 19 + Tailwind CSS
+- **Frontend**: Next.js 15 + React 19 + Tailwind CSS + shadcn/ui
+- **Architecture**: Separate frontend/backend (no monorepo)
 - **Development**: Hot reload, TypeScript, ESLint, Prettier
 - **Production**: Optimized builds, security headers, compression
 
 ## Quick Start
+
+### Using Bootstrap Script (Recommended)
+
+Download and run the bootstrap script to create a new project:
+
+```bash
+# Download the bootstrap script
+curl -O https://raw.githubusercontent.com/Pinghuachiu/antarose-template-nodejs/main/anta-node.sh
+chmod +x anta-node.sh
+
+# Create your new project
+./anta-node.sh my-awesome-project
+
+# Follow the interactive prompts:
+# - Project description
+# - Author name (default: Antarose)
+# - Author email (default: jackalchiu@antarose.com)
+# - Git remote setup (optional)
+# - Install dependencies (recommended)
+```
+
+The script will automatically:
+- ✅ Download the template
+- ✅ Remove template git history
+- ✅ Clean up unnecessary files (docs/specs)
+- ✅ Configure project information
+- ✅ Initialize new git repository
+- ✅ Install dependencies
+- ✅ Create initial commit
+
+### Manual Setup
 
 ### Prerequisites
 

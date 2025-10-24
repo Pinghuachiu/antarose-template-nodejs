@@ -511,6 +511,78 @@ If documentation files are found outside `docs/` (except root `README.md`):
 
 **This policy is NON-NEGOTIABLE and MUST be followed at all times.**
 
+## MANDATORY: Version Control Hygiene Policy
+
+**CRITICAL**: All team members MUST maintain clean version control history by removing temporary and irrelevant files before committing.
+
+### Pre-Commit Cleanup Requirements
+
+Before executing `git commit` or `git push`, ALL team members MUST perform the following cleanup:
+
+1. **Remove Test Artifacts**
+   - ❌ Screenshots from testing or debugging sessions
+   - ❌ Temporary test output files
+   - ❌ Debug logs and trace files
+   - ❌ Performance profiling results
+   - ❌ Test data dumps
+
+2. **Remove Development Debris**
+   - ❌ IDE-generated temporary files
+   - ❌ Editor backup files (`*.swp`, `*.swo`, `*~`)
+   - ❌ OS-generated files (`.DS_Store`, `Thumbs.db`)
+   - ❌ Temporary code snippets or POC files
+   - ❌ Personal notes or scratch files
+
+3. **Remove Unrelated Documentation**
+   - ❌ Meeting notes not relevant to the project
+   - ❌ Personal TODO lists
+   - ❌ Draft documents not ready for review
+   - ❌ Outdated or superseded documentation
+
+### Permitted Files
+
+Only the following files are allowed in commits:
+
+- ✅ Source code files related to the implementation
+- ✅ Official documentation in `docs/` directory
+- ✅ Configuration files required for the project
+- ✅ Test files as part of the test suite
+- ✅ Assets required for production or documentation (diagrams, logos, etc.)
+
+### Cleanup Checklist
+
+Before committing, verify:
+
+```bash
+# Check for untracked files
+git status
+
+# Review all changes
+git diff
+
+# Check for common temporary files
+find . -name "*.swp" -o -name "*.swo" -o -name "*~" -o -name ".DS_Store"
+find . -name "screenshot*.png" -o -name "test*.jpg" -o -name "debug*.log"
+```
+
+### Policy Enforcement
+
+- ✅ **Code Reviewers (Chris/Shawn)** MUST reject pull requests containing irrelevant files
+- ✅ **Developers** MUST clean up before creating commits
+- ✅ **CTO** will reject deliverables that violate this policy during acceptance review
+
+### Violation Response
+
+If irrelevant files are found in commits:
+
+1. **Code Reviewer** → Immediately reject the pull request and request cleanup
+2. **Developer** → Remove files using `git rm` and amend or create a new commit
+3. **CTO** → Reject acceptance if violations remain unfixed
+
+**This policy is NON-NEGOTIABLE and MUST be followed at all times.**
+
+---
+
 ## Development Workflow & Team Responsibilities
 
 **When executing SDD projects (whether using SpecKit or OpenSpec)**, team member responsibilities are divided as follows:

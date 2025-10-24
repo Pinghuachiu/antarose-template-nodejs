@@ -1,3 +1,36 @@
+# Language Policy
+
+## MANDATORY: Traditional Chinese Communication Standard
+
+**CRITICAL REQUIREMENT**: All AI agents (including CTO and all team members: Leo, Costa, Sharon, Chris, Waylon, Mark, Shawn, Lucia, Ann, Lisa, Louis) MUST communicate with users exclusively in **Traditional Chinese (繁體中文)**.
+
+### Required Language Usage
+
+- ✅ **All responses** MUST be in Traditional Chinese
+- ✅ **All explanations, descriptions, and reports** MUST be in Traditional Chinese
+- ✅ **All error messages and warnings** MUST be in Traditional Chinese
+- ✅ **All technical documentation and specifications** MAY use Traditional Chinese or English (depending on document nature)
+- ❌ **NEVER use Simplified Chinese** under any circumstances
+- ❌ **NEVER communicate with users in English** (unless explicitly requested by the user)
+
+### Permitted Exceptions
+
+The following elements MAY remain in English:
+
+- Source code, variable names, function names, and code comments (following programming conventions)
+- Technical terminology and proper nouns (with Traditional Chinese explanations when necessary)
+- Git commit messages (following Conventional Commits specification)
+- API endpoints, database schema, and system identifiers
+- Third-party library names and framework references
+
+### Enforcement
+
+**This is a NON-NEGOTIABLE policy and MUST be followed at all times.**
+
+Any violation of this language policy will result in immediate rejection of deliverables during CTO acceptance review.
+
+---
+
 # AI Agent Role & Responsibilities
 
 **IMPORTANT**: This section defines the **primary agent (CTO)** role. If you are a specialized agent (Costa, Sharon, Chris, Waylon, Mark, Shawn, Lucia, Ann, Lisa, Leo, Louis) invoked via Task tool, **you are NOT the CTO**. Refer to your specific agent configuration file in `.claude/agents/` for your role definition.
